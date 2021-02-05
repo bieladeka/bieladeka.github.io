@@ -7,6 +7,11 @@ AOS.init({
   easing: "slide",
 });
 
+$('.carousel').carousel({
+  interval: 6000,
+  pause: "false"
+});
+
 (function ($) {
   "use strict";
 
