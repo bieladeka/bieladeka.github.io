@@ -369,50 +369,50 @@ AOS.init({
   contentWayPoint();
 
   // magnific popup
-//   $(".image-popup").magnificPopup({
-//     type: "image",
-//     closeOnContentClick: true,
-//     closeBtnInside: false,
-//     fixedContentPos: true,
-//     mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
-//     gallery: {
-//       enabled: true,
-//       navigateByImgClick: true,
-//       preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
-//     },
-//     image: {
-//       verticalFit: true,
-//     },
-//     zoom: {
-//       enabled: true,
-//       duration: 300, // don't foget to change the duration also in CSS
-//     },
-//   });
+  //   $(".image-popup").magnificPopup({
+  //     type: "image",
+  //     closeOnContentClick: true,
+  //     closeBtnInside: false,
+  //     fixedContentPos: true,
+  //     mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
+  //     gallery: {
+  //       enabled: true,
+  //       navigateByImgClick: true,
+  //       preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+  //     },
+  //     image: {
+  //       verticalFit: true,
+  //     },
+  //     zoom: {
+  //       enabled: true,
+  //       duration: 300, // don't foget to change the duration also in CSS
+  //     },
+  //   });
 
-  $(".gallery-link").on("click", function () {
-    $(this).find(".gallery").magnificPopup("open");
+  $(".ref-gallery-link").on("click", function () {
+    $(this).find(".ref-gallery").magnificPopup("open");
   });
 
-  $(".gallery").each(function () {
+  $(".ref-gallery").each(function () {
     $(this).magnificPopup({
       delegate: "a",
       type: "image",
-	  closeOnContentClick: true,
-	  closeBtnInside: false,
-	  fixedContentPos: true,
-	  mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
-	  gallery: {
-		enabled: true,
-		navigateByImgClick: true,
-		preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
-	  },
-	  image: {
-		verticalFit: true,
-	  },
-	  zoom: {
-		enabled: true,
-		duration: 300, // don't foget to change the duration also in CSS
-	  },
+      closeOnContentClick: true,
+      closeBtnInside: false,
+      fixedContentPos: true,
+      mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        verticalFit: true,
+      },
+      zoom: {
+        enabled: true,
+        duration: 300, // don't foget to change the duration also in CSS
+      },
     });
   });
 
@@ -425,4 +425,59 @@ AOS.init({
 
     fixedContentPos: false,
   });
+
+  // Services modals
+  $("#stavebna-cinnost-btn").click(function () {
+    $("#stavebna-cinnost-modal").modal({ show: true });
+  });
+
+  /* blur on modal open, unblur on close */
+  $("#stavebna-cinnost-modal").on("show.bs.modal", function () {
+    $(".col-6,.row .thumbnail").addClass("blur");
+  });
+
+  $("#stavebna-cinnost-modal").on("hide.bs.modal", function () {
+    $(".col-6,.row .thumbnail").removeClass("blur");
+  });
+
+  $("#obchodna-cinnost-btn").click(function () {
+    $("#obchodna-cinnost-modal").modal({ show: true });
+  });
+
+  /* blur on modal open, unblur on close */
+  $("#obchodna-cinnost-modal").on("show.bs.modal", function () {
+    $(".col-6,.row .thumbnail").addClass("blur");
+  });
+
+  $("#obchodna-cinnost-modal").on("hide.bs.modal", function () {
+    $(".col-6,.row .thumbnail").removeClass("blur");
+  });
+
+  $("#nakladna-doprava-btn").click(function () {
+    $("#nakladna-doprava-modal").modal({ show: true });
+  });
+
+  /* blur on modal open, unblur on close */
+  $("#nakladna-doprava-modal").on("show.bs.modal", function () {
+    $(".col-6,.row .thumbnail").addClass("blur");
+  });
+
+  $("#nakladna-doprava-modal").on("hide.bs.modal", function () {
+    $(".col-6,.row .thumbnail").removeClass("blur");
+  });
+
+
+  $("#projektantska-cinnost-btn").click(function () {
+    $("#projektantska-cinnost-modal").modal({ show: true });
+  });
+
+  /* blur on modal open, unblur on close */
+  $("#projektantska-cinnost-modal").on("show.bs.modal", function () {
+    $(".col-6,.row .thumbnail").addClass("blur");
+  });
+
+  $("#projektantska-cinnost-modal").on("hide.bs.modal", function () {
+    $(".col-6,.row .thumbnail").removeClass("blur");
+  });
+
 })(jQuery);

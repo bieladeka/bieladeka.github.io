@@ -900,8 +900,10 @@ $badge-pill-border-radius:          10rem !default;
 // Padding applied to the modal body
 $modal-inner-padding:               1rem !default;
 
-$modal-dialog-margin:               .5rem !default;
-$modal-dialog-margin-y-sm-up:       1.75rem !default;
+$modal-dialog-margin:               2.5rem !default; 
+$modal-dialog-margin-y-sm-up:       3.75rem !default;
+
+//.5rem and 1.75rem
 
 $modal-title-line-height:           $line-height-base !default;
 
@@ -923,9 +925,9 @@ $modal-header-padding-x:            1rem !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 $modal-xl:                          1140px !default;
-$modal-lg:                          800px !default;
-$modal-md:                          500px !default;
-$modal-sm:                          300px !default;
+$modal-lg:                          70% !default;
+$modal-md:                          70% !default;
+$modal-sm:                          80% !default;
 
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              none !default;
@@ -1089,3 +1091,21 @@ $positions: static, relative, absolute, fixed, sticky !default;
 
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+
+// Responsive sizing
+//Bootstrap col-xs
+$extra_small_mobile:'(max-width: 433px)';
+$small_mobile:'only screen and (min-width: 434px) and(max-width: 575px)';
+
+//Bootstrap col-sm
+$large_mobile: 'only screen and (min-width: 576px) and (max-width: 767px)';
+
+//Bootstrap col-md
+$tab_device:'only screen and (min-width: 768px) and (max-width: 991px)';
+
+//Bootstrap col-lg
+$medium_device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+
+//Bootstrap col-xl
+$big_screen:'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$extra_big_screen: 'only screen and (min-width: 1400px)';
